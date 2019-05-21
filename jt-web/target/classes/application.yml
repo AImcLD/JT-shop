@@ -1,0 +1,16 @@
+server:
+  port: 8092
+  servlet:    context-path: /
+spring:
+  mvc:         
+    view:
+      prefix: /WEB-INF/views/     # /默认代表根目录 src/main/webapp
+      suffix: .jsp
+ 
+dubbo:
+  scan:
+    basePackages: com.jt
+  application:
+    name: consumer-web
+  registry:
+    address: zookeeper://192.168.118.131:2181
